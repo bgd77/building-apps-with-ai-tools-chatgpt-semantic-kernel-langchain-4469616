@@ -7,7 +7,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": ""},
+        {"role": "system", "content": "Respond in Romanian"},
         {"role": "user", "content": "Say 'Hello world'"}
     ],
     temperature=0.7,
