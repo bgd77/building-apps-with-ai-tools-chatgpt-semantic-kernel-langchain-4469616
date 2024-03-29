@@ -14,3 +14,23 @@ class Person(BaseModel):
 
 class PeopleList(BaseModel):
     people: list[Person] = Field(description="A list of people")
+
+model = ChatOpenAI(model="gpt-4")
+
+people_data = model.predict(
+    "Generate a list of 10 fake peoples information. Only return the list. Each person should have a first name, last name and date of birth")
+
+parser = PydanticOutputParser(pydantic_object=PeopleList)
+
+prompt = PromptTemplate(
+    template="Answer the user query.\n {format_instructions}\n {query}",
+    input_variables=["query"],
+    partial_variables={"format_instructions": parser.get_format_instructions()})
+
+parser_input = prompt.format_prompt(query=people_data)
+model = ChatOpenAI()
+output = model.predict(parser_input.to_string())
+
+people_data_parsed = parser.parse(output)
+
+print(people_data_parsed)
