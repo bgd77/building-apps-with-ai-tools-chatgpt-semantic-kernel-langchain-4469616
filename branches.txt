@@ -1,0 +1,27 @@
+1. Connecting to the ChatGPT API
+    - Connecting to the ChatGPT API - 01_02
+
+2. A Discount Bot
+    - Sentiment analysis                - 02_01b
+    - Providing a discount through a UI - 02_02b    uvicorn main:app --reload
+    - Challenge: Turning rude customers away - 02_03
+
+3. Building with Semantic Kernel
+    - A simple summarizer with Semantic Kernel      - 03_01b
+    - Formating your data with few-shot learning    - 03_02b
+    - Integrating chain-of-thought reasoning        - 03_03
+    - Learning to use Whisper for text to speech    - 03_04b
+    - Challenge: get audio and do book recommendation -
+    - Challenge fix:                                - 03_06
+
+4. Building Document Search with LangChain
+    - Building a simple prompt chaing with LangChain    - 04_01b
+    - Answering questions with a vector DB              - 04_02b
+    - Extracting key information from your question     - 04_04b
+    - Challenge: a librarian with a library             - 04_05
+    
+5. Testing ChatGPT Apps
+    - Generating sample data with ChatGPT               - 05_01b
+    - Generative AI-powered tests                       - 05_02b
+    - Evaluating GenAI prompt performance               - 05_03
+
